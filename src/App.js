@@ -4,16 +4,19 @@ import 'boxicons'; // Para los iconos
 import { BrowserRouter as Router } from "react-router-dom";
 import Pagina from './componentes/Paginas';
 import Carrito from "./Carrito/Carrito";
+import {DataProvider} from './Context/Dataprovider';
 function App() {
   return (
+    <DataProvider>
     <div className="App">
       <Router>
       <Header/>
+       <Carrito/>
       <Pagina/>
-     <Carrito/>
       </Router>
      
     </div>
+    </DataProvider>
   );
 }
 
