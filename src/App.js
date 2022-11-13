@@ -1,12 +1,18 @@
 import React from "react";
 import Header from "./componentes/Header/Header";
-import ProductoLista from './componentes/productos/ProductoLista';
 import 'boxicons'; // Para los iconos
+import { BrowserRouter as Router } from "react-router-dom";
+import Pagina from './componentes/Paginas';
+import Carrito from "./Carrito/Carrito";
 function App() {
   return (
     <div className="App">
-     <Header/>
-     <ProductoLista/>
+      <Router>
+      <Header/>
+      <Pagina/>
+     <Carrito/>
+      </Router>
+     
     </div>
   );
 }

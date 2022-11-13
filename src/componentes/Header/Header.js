@@ -1,22 +1,23 @@
 import React from 'react';
 import Nike from '../../img/images/Nike.jpg';
+import { Link } from 'react-router-dom';
 
 
 
 function Header() {
   return (
       <header>
-            <a href='#'>
+            <Link to='#'>
               <div className='logo'>
                 <img src={Nike} alt ="logo" width='150'/>
               </div>
-            </a>
+            </Link>
             <ul>
               <li>
-                <a href='#'> Inicio </a>
+                <Link to='/'> Inicio </Link> {/* // estos para cuando le demos click funciones la con dom router */}
               </li>
               <li>
-                <a href='#'>Productos</a>
+                <Link to='/productos'>Productos</Link>
               </li>
             </ul>
             <div className=' cart'>

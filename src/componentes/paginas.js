@@ -1,14 +1,22 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+ // estos para el router
+import Inicio from './inicio/Inicio';
+import ProductoLista from "./productos/ProductoLista";
 
 
 
-const pagina =  ()=> { // esta es lo mismo que fuction, ya costa le dice funcion flecha 
+
+const Pagina =  ()=> { // esta es lo mismo que fuction, ya costa le dice funcion flecha 
     return(
-        <div >
-         <h1>Pagina</h1>
-        </div>
+        <section>
+          <Routes>
+            <Route path="/" element = {<Inicio/>}></Route>
+            <Route path="/productos" element = {<ProductoLista/>}></Route>
+          </Routes>
+        </section>
       );
     
 }
 
-export default pagina;
+export default Pagina;
